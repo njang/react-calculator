@@ -1,19 +1,40 @@
 import React, { Component } from 'react';
 import './App.css';
+import Button from "./components/Button"
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+    constructor(){
+        super()
+        this.state = {
+            buttons: [
+                ["&plusmn;", "&radic;", "&percnt;", "&div;"], 
+                [7, 8, 9, "&times;"], 
+                [4, 5, 6, "&ndash;"], 
+                [1, 2, 3, "&plus;"], 
+                [".", 0, "&equals;", "C"]
+            ]
+        }
+    }
+    render() {
+        let buttonsArray = this.state.buttons.map((row) => {
+            return (
+                row.map((cell) => {
+                    // let buttonValue = (Number.isInteger(cell) ? cell : cell.replace(/[^A-Za-z.]/g, ''));
+
+                    return (
+                        <Button 
+                            buttonValue = { cell }
+                        />
+                    )
+                })
+            )
+        })
+        return (
+            <div className="Calculator">
+                { buttonsArray }
+            </div>
+        );
+    }
 }
 
 export default App;
