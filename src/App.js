@@ -7,11 +7,11 @@ class App extends Component {
         super()
         this.state = {
             buttons: [
-                ["&plusmn;", "&radic;", "&percnt;", "&div;"], 
-                [7, 8, 9, "&times;"], 
-                [4, 5, 6, "&ndash;"], 
-                [1, 2, 3, "&plus;"], 
-                [".", 0, "&equals;", "C"]
+                ["\u00B1", "\u221A", "\u0025", "\u2215"], 
+                [7, 8, 9, "\u00D7"], 
+                [4, 5, 6, "\u2013"], 
+                [1, 2, 3, "\u002B"], 
+                [".", 0, "\u003D", "C"]
             ]
         }
     }

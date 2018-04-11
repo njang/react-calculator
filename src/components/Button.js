@@ -4,7 +4,7 @@ class Button extends Component {
 	render(){
     	return(
     		<button className="bg-dark text-white font-weight-bold">
-    			{ this.props.buttonValue }
+    			<text>{ this.props.buttonValue }</text>
 			</button>
     	)
 	}  	
