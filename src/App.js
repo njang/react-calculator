@@ -19,8 +19,6 @@ class App extends Component {
         let buttonsArray = this.state.buttons.map((row) => {
             return (
                 row.map((cell) => {
-                    // let buttonValue = (Number.isInteger(cell) ? cell : cell.replace(/[^A-Za-z.]/g, ''));
-
                     return (
                         <Button 
                             buttonValue = { cell }
@@ -31,6 +29,7 @@ class App extends Component {
         })
         return (
             <div className="Calculator">
+                <input id="display" placeholder="0" disabled />
                 { buttonsArray }
             </div>
         );
